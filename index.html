@@ -9,7 +9,7 @@
   <title>Dias</title>
   <style>
     body {
-      color: #ffffff;
+      color: #222222;
       font-family: sans-serif;
       overflow: hidden;
       margin: 0;
@@ -111,10 +111,10 @@
       border-radius: 4px;
     }
     .control-button-highlight:hover {
-      background: #ffffff26;
+      background: #22222226;
     }
     .control-button-highlight.active {
-      background: #ffffff59;
+      background: #22222259;
     }
     .fullscreen-button {
       background: white;
@@ -132,13 +132,13 @@
       cursor: auto;
     }
     .sc-monitor-root[data-opcode^="data_"] .sc-monitor-value-color {
-      background-color: #ffffff;
+      background-color: #222222;
     }
     .sc-monitor-row-value-outer {
-      background-color: #ffffff;
+      background-color: #222222;
     }
     .sc-monitor-row-value-editing .sc-monitor-row-value-outer {
-      background-color: #e5e5e5;
+      background-color: #080808;
     }
     
   </style>
@@ -204,7 +204,7 @@
       scaffolding.width = 480;
       scaffolding.height = 360;
       scaffolding.resizeMode = "dynamic-resize";
-      scaffolding.editableLists = true;
+      scaffolding.editableLists = false;
       scaffolding.usePackagedRuntime = true;
       scaffolding.setup();
       scaffolding.appendTo(appElement);
@@ -221,7 +221,7 @@
       };
 
       scaffolding.setUsername("player####".replace(/#/g, () => Math.floor(Math.random() * 10)));
-      scaffolding.setAccentColor("#ffffff");
+      scaffolding.setAccentColor("#222222");
 
       try {
         scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "p4-@Dias.sb3"));
@@ -250,7 +250,7 @@
           }
         });
         const otherControlsExist = false;
-        const fillColor = otherControlsExist ? '#575E75' : '#ffffff';
+        const fillColor = otherControlsExist ? '#575E75' : '#222222';
         const updateFullScreen = () => {
           isFullScreen = !!(document.fullscreenElement || document.webkitFullscreenElement);
           document.body.classList.toggle('is-fullscreen', isFullScreen);
